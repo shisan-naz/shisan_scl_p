@@ -1,0 +1,156 @@
+
+*{
+    margin:0;
+    padding:0;
+    
+}
+body{
+    /* background-color:#e3eaff; */
+    /* background-color:rgb(243, 255, 221); */
+     background-color: #F2F4F7;
+    overflow-x: hidden;
+
+    font-family: 'Noto Sans Bengali', 'SolaimanLipi', sans-serif;
+}
+
+
+/* Navbar Css goes now */
+
+nav{
+    /* background: white;
+     */
+     /* background: #3498DB; */
+    background: white;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    
+}
+
+nav ul  {
+    width:100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding : 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color:#2C3E50;
+    font-weight: bolder;
+}
+
+nav a:hover {
+    /* background-color: #e4ebff; */
+    /* background-color:rgb(243, 255, 221); */
+    background: #ECF0F1;
+    
+   
+    color: #101111;
+}
+
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+nav .active {
+    /* background-color:rgb(243, 255, 221); */
+    background: #ECF0F1;
+    color: #101111;
+}
+
+
+nav .responsive_menu{
+    display: flex;
+}
+
+
+nav .menu_btn {
+  display: none;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (min-width: 100px) {
+  nav ul.responsive_menu {
+    position: absolute;
+    top: 50px;
+    right: -100%;
+    width: 100%;
+    height: calc(100vh - 50px);
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 20px;
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
+  }
+
+  nav ul.responsive_menu.active {
+    right: 0;
+  }
+
+  nav ul.responsive_menu li a {
+    color: black;
+    padding: 15px 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav .menu_btn {
+    display: block;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    margin-top: 10px;
+  }
+}
+
+
+
+
+
+/* Floating Alert Custom CSS */
+
+
+
+.message-stack {
+  position: fixed;
+  top: 50px;
+  right: 20px;
+  z-index: 1055;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.floating-alert {
+  min-width: 300px;
+  max-width: 400px;
+  /* box-shadow: 0 4px 12px rgba(0,0,0,0.15); */
+}
+
+.fading-slow.fade {
+  transition: opacity 1s ease-out;
+}
+
+
+
+/*  Custom CSS for Iframe */
+
+.custom-map-iframe {
+  width: 100%;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  height: 600px;
+}
+
